@@ -1,0 +1,54 @@
+header {
+    padding: 24px;
+    background-color: #0D47A1;
+}
+
+header nav {
+    display: flex;
+    flex-grow: 1;
+    line-height: 72px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+header nav a {
+    color: #fff;
+    display: inline-block;
+    height: 70px;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+}
+
+header nav div.submenu {
+    position: relative;
+    display: inline-block;
+}
+
+
+header nav a.active, header nav a:hover, header nav div:hover a {
+    background-color: rgba(255, 255, 255, .12);
+}
+
+header nav div.submenu-Pokemon>a.active::after {
+    content: '';
+    /*    content: '\25BC'; */
+    font-size: 10px;
+    margin-left: 12px;
+    opacity: .25;
+    display: block;
+}
+
+header nav div.submenu div a {
+    display: block;
+    line-height: 40px;
+    height: 40px;
+    white-space: nowrap;
+    color: black;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+}
+
+* {
+    color: red
+}
