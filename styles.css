@@ -16,6 +16,15 @@ section {
     margin: 0 auto 20px;
 }
 
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
 article {
     display: block;
 }
@@ -48,7 +57,7 @@ article.search input {
     cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-property: padding;
     transition-duration: 215ms;
-    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-timing-function: ease-out;
     transition-delay: 0s;
 }
 
@@ -71,8 +80,13 @@ header .search {
     position: relative;
 }
 
+header .search .results ul {
+    padding: 0;
+}
+
 header .search input {
     line-height: 32px;
+    background: 0 0;
     border: none;
     border: 1px solid;
     padding: 0 34px 0 10px;
@@ -84,19 +98,13 @@ header .search input {
 header .search button {
     height: 32px;
     border: none;
-    background-color: 0 0;
+    background: 0 0;
     padding: 0 8px;
     position: absolute;
-    right: 0;
     top: 50%;
     margin-top: -16px;
 }
 
-header .search button svg {
-    display: block;
-    width: 24;
-    height: 24;
-}
 
 header nav {
     display: flex;
@@ -114,6 +122,17 @@ header nav a {
     margin: 0;
     padding: 0 15px;
     position: relative;
+}
+
+header .search .results {
+    display: none;
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .3);
+    z-index: 3;
+    top: 51px;
+    left: 0;
+    right: 0;
 }
 
 header nav div.submenu {
@@ -285,6 +304,10 @@ header nav div.submenu div a {
     display: flex;
     justify-content: space-around;
     line-height: 38px;
+}
+
+button {
+    align-items: flex-start;
 }
 
 a {
